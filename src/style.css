@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+}
+
+h1,
+a,
+p,
+li {
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+
+body {
+    background-color: #242526;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+#root {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+nav ul li button {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    color: black;
+}
+
+nav ul li button::before {
+    content: attr(data-cartcount);
+    top: -.7em;
+    right: -.7em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    color: white;
+    background-color: blue;
+}
+
+.productContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.productBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2em;
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.imgDiv {
+    width: 100%;
+    height: 150px;
+}
+
+.imgDiv img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.productBox p {
+    color: #242526;
+}
+
+.productBox button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: none;
+    background: #6E6D70;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+    color: #DFDEDF;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: .1em;
+}
+
+.cartContainer {
+    position: fixed;
+    width: 300px;
+    background-color: rgb(158, 176, 190);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    top: 5em;
+    right: -1000px;
+    transition: right ease-in 250ms;
+}
+
+.show {
+    right: 0
+}
