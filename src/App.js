@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Cart from './components/Cart'
 import NavBar from './components/NavBar'
 import Products from './components/Products'
